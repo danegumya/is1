@@ -1,0 +1,15 @@
+/*
+!/.gitignore
+!/pom.xml
+!/src/
+!/db/
+/db/*
+!/db/schema.sql
+
+.env
+.env.*
+*.md
+*.log
+*.pid
+.DS_Store
+._*

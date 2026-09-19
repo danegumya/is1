@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Фильмы</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Фильмы</h1>
+            <nav id="menu" hidden>
+                <button data-page="movies">Фильмы</button>
+                <button data-page="references">Связанные объекты</button>
+                <button data-page="special">Специальные операции</button>
+                <span id="user"></span>
+                <button id="logout">Выйти</button>
+            </nav>
+        </header>
+        <p id="notice" role="status"></p>
+        <main>
+            <section id="login">
+                <h2>Вход</h2>
+                <form id="login-form">
+                    <label>
+                        Имя
+                        <input
+                            name="name"
+                            required
+                            pattern="[a-zA-Z0-9_]{3,40}"
+                            autocomplete="username"
+                            title="От 3 до 40 латинских букв, цифр или подчёркиваний"
+                        />
+                    </label>
+                    <label>
+                        Пароль
+                        <input
+                            name="password"
+                            type="password"
+                            required
+                            minlength="10"
+                            maxlength="128"
+                            autocomplete="current-password"
+                        />
+                    </label>
+                    <p>Имя от 3 до 40 символов. Пароль от 10 до 128 символов.</p>
+                    <button name="action" value="login">Войти</button>
+                    <button name="action" value="register">Зарегистрироваться</button>
+                </form>
+            </section>
+            <section id="movies" hidden>
+                <div class="toolbar">
+                    <button id="new-movie">Новый фильм</button>
+                    <form id="lookup">
+                        <input
+                            name="id"
+                            type="number"
+                            min="1"
+                            max="2147483647"
+                            required
+                            placeholder="ID фильма"
+                            aria-label="ID фильма"
+                        />
+                        <button>Открыть по ID</button>
+                    </form>
+                </div>
+                <form id="filters" class="toolbar">
+                    <label>
+                        Поле
+                        <select name="field"></select>
+                    </label>
+                    <label>
+                        Точное значение
+                        <input name="value" />
+                    </label>
+                    <label>
+                        Сортировка
+                        <select name="sort"></select>
+                    </label>
+                    <label>
+                        Порядок
+                        <select name="order">
+                            <option value="asc">По возрастанию</option>
+                            <option value="desc">По убыванию</option>
+                        </select>
+                    </label>
+                    <button>Применить</button>
+                </form>
+                <div id="movie-list" class="scroll"></div>
+                <div class="toolbar">
+                    <button id="prev">Назад</button>
+                    <span id="paging"></span>
+                    <button id="next">Далее</button>
+                </div>
+            </section>
+            <section id="references" hidden>
+                <h2>Связанные объекты</h2>
+                <p>
+                    Для фильма нужны координаты и человек в роли оператора. Добавьте их здесь, затем
+                    вернитесь в раздел «Фильмы». Люди появляются в списках режиссёров, сценаристов и
+                    операторов. Одну запись можно использовать в нескольких фильмах. Место
+                    необязательно.
+                </p>
+                <div class="toolbar">
+                    <button data-ref="locations">Добавить место</button>
+                    <button data-ref="coordinates">Добавить координаты</button>
+                    <button data-ref="people">Добавить человека</button>
+                </div>
+                <div id="reference-list"></div>
+            </section>
+            <section id="special" hidden>
+                <h2>Специальные операции</h2>
+                <p>
+                    Отсутствие наград хранится как пустое значение. Среднее число пальм учитывает
+                    только заполненные значения. Порядок жанров: ACTION, WESTERN, TRAGEDY, THRILLER.
+                </p>
+                <div class="toolbar">
+                    <button data-special="average">Среднее число пальм</button>
+                    <button data-special="minimum">Фильм с минимальным ID</button>
+                    <button data-special="without-oscars">Фильмы без Оскаров</button>
+                </div>
+                <form id="genres">
+                    <label>
+                        Жанр
+                        <select name="genre"></select>
+                    </label>
+                    <button>Жанры меньше выбранного</button>
+                </form>
+                <form id="award">
+                    <h3>Награждение</h3>
+                    <label>
+                        Продолжительность больше
+                        <input
+                            name="length"
+                            type="number"
+                            min="0"
+                            max="9223372036854775807"
+                            required
+                        />
+                    </label>
+                    <label>
+                        Добавить Оскаров
+                        <input
+                            name="amount"
+                            type="number"
+                            min="1"
+                            max="9223372036854775807"
+                            required
+                        />
+                    </label>
+                    <button>Наградить</button>
+                </form>
+                <div id="special-result" class="scroll" aria-live="polite"></div>
+            </section>
+        </main>
+        <dialog id="editor">
+            <h2 id="editor-title"></h2>
+            <div id="editor-help"></div>
+            <form id="edit-form">
+                <div id="fields" class="fields"></div>
+                <p id="edit-error" class="error" role="alert"></p>
+                <button id="edit-save">Сохранить</button>
+                <button type="button" data-close="editor">Отмена</button>
+            </form>
+        </dialog>
+        <dialog id="details">
+            <h2>Информация о фильме</h2>
+            <p id="detail-status" role="status"></p>
+            <div id="detail-body"></div>
+            <button id="detail-edit">Изменить</button>
+            <button type="button" data-close="details">Закрыть</button>
+        </dialog>
+        <dialog id="confirm">
+            <h2>Удаление фильма</h2>
+            <p id="confirm-text"></p>
+            <p>
+                Общие записи сохранятся. Связанные записи, которые больше не используются, будут
+                удалены.
+            </p>
+            <p id="delete-error" class="error"></p>
+            <button id="delete-confirm">Удалить</button>
+            <button type="button" data-close="confirm">Отмена</button>
+        </dialog>
+    </body>
+</html>

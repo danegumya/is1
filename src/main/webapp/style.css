@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    color: #202020;
+    background: #fafafa;
+    font:
+        16px system-ui,
+        sans-serif;
+}
+header,
+main,
+#notice {
+    margin: 0 auto;
+    padding: 16px 24px;
+    max-width: 1500px;
+}
+header {
+    border-bottom: 1px solid #ccc;
+}
+h1 {
+    margin: 0 0 12px;
+}
+h2 {
+    font-size: 21px;
+}
+button,
+input,
+select {
+    font: inherit;
+    padding: 7px 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+button {
+    cursor: pointer;
+    background: #fff;
+}
+button:hover {
+    background: #e9eff5;
+}
+button:disabled {
+    cursor: default;
+    opacity: 0.45;
+}
+nav,
+.toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 8px 0;
+}
+form {
+    margin: 12px 0;
+}
+#login form,
+#award {
+    max-width: 460px;
+}
+#lookup {
+    display: flex;
+    gap: 6px;
+    margin: 0;
+}
+.scroll {
+    overflow-x: auto;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+}
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 9px;
+    text-align: left;
+    vertical-align: top;
+}
+th {
+    background: #eee;
+    white-space: nowrap;
+}
+td button {
+    margin: 2px;
+    font-size: 14px;
+}
+dialog {
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    width: min(760px, 95vw);
+    max-height: 90vh;
+    overflow: auto;
+}
+dialog::backdrop {
+    background: #0005;
+}
+.fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0 16px;
+}
+.error,
+#notice {
+    color: #a11919;
+    white-space: pre-wrap;
+}
+#user {
+    margin-left: auto;
+}
+dl {
+    display: grid;
+    grid-template-columns: minmax(130px, 1fr) 2fr;
+    gap: 8px;
+}
+dt {
+    font-weight: 600;
+}
+dd {
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+[hidden] {
+    display: none !important;
+}
