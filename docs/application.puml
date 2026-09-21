@@ -1,0 +1,113 @@
+@startuml
+!pragma layout smetana
+skinparam monochrome true
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam dpi 180
+hide empty members
+class MoviesResource <<RequestScoped>> {
+  ~ service : MovieService
+  --
+  + list(...) : Object
+  + get(id) : Movie
+  + create(input) : Movie
+  + update(id, input) : Movie
+  + delete(id, version) : void
+  + references() : Object
+  + person(input) : Object
+  + coordinates(input) : Object
+  + location(input) : Object
+  + special(name, genre) : Object
+  + award(input) : Object
+}
+class SessionResource <<RequestScoped>> {
+  ~ request : HttpServletRequest
+  ~ auth : AuthService
+  --
+  + state() : Object
+  + login(input) : Object
+  + register(input) : Object
+  + logout() : void
+}
+class MovieService <<ApplicationScoped>> {
+  ~ em : EntityManager
+  ~ validator : Validator
+  --
+  + find(type, id) : T
+  + list(...) : Map
+  + save(id, input) : Movie
+  + delete(id, version) : void
+  + references() : Map
+  + person(input) : Person
+  + coordinates(input) : Coordinates
+  + location(input) : Location
+  + special(name, genre) : Object
+  + award(input) : Object
+}
+class AuthService <<ApplicationScoped>> {
+  ~ em : EntityManager
+  ~ validator : Validator
+  --
+  + authenticate(input, register) : String
+  - hash(password, salt) : byte[]
+}
+interface EntityManager {
+  + find(...) : T
+  + createQuery(...) : TypedQuery
+  + createNativeQuery(...) : Query
+  + persist(entity) : void
+  + remove(entity) : void
+  + flush() : void
+  + refresh(entity) : void
+}
+class Inputs <<utility>> {
+  + {static} check(validator, input) : void
+}
+interface Validator {
+  + validate(object, groups) : Set
+}
+interface HttpSession {
+  + getAttribute(name) : Object
+  + setAttribute(name, value) : void
+  + invalidate() : void
+}
+package model {
+  class Movie
+  class Person
+  class Coordinates
+  class Location
+  class AppUser
+}
+MoviesResource --> MovieService : CDI
+SessionResource --> AuthService : CDI
+MovieService --> EntityManager : JPA
+AuthService --> EntityManager : JPA
+MovieService ..> model : entities
+AuthService ..> AppUser : AppUser
+MovieService ..> Inputs : check
+AuthService ..> Inputs : check
+Inputs ..> Validator : validate
+SessionResource ..> HttpSession : session
+class SecurityFilter <<WebFilter>> {
+  + doFilter(input, output, chain) : void
+  - allowed(address) : boolean
+  - fail(response, status, message) : void
+}
+interface Filter {
+  + doFilter(input, output, chain) : void
+}
+class Errors <<Provider>> {
+  + toResponse(error) : Response
+}
+interface ExceptionMapper<Exception> {
+  + toResponse(error) : Response
+}
+class Api <<ApplicationPath /api>> {
+}
+class Application <<Jakarta REST>> {
+}
+SecurityFilter ..> HttpSession : session
+SecurityFilter ..|> Filter
+Errors ..|> "ExceptionMapper<Exception>"
+Api --|> Application
+@enduml

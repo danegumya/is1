@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="480" viewBox="0 80 1120 480">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#334155" stroke-width="1.4"/></marker></defs>
+<rect y="0" width="100%" height="2000" fill="white"/>
+<path d="M40 148 V120 H165 V148 H280 V299 H40 Z" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+<text x="54" y="141" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#172033">api</text>
+<text x="58" y="175" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Api</text>
+<text x="58" y="200" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">MoviesResource</text>
+<text x="58" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">SessionResource</text>
+<text x="58" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">SecurityFilter</text>
+<text x="58" y="275" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Errors</text>
+<path d="M440 148 V120 H565 V148 H700 V399 H440 Z" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+<text x="454" y="141" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#172033">service</text>
+<text x="458" y="175" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">MovieService</text>
+<text x="458" y="200" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">AuthService</text>
+<text x="458" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Inputs</text>
+<text x="458" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Inputs.MovieData</text>
+<text x="458" y="275" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Inputs.PersonData</text>
+<text x="458" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Inputs.CoordinatesData</text>
+<text x="458" y="325" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Inputs.LocationData</text>
+<text x="458" y="350" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Inputs.Credentials</text>
+<text x="458" y="375" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Inputs.Award</text>
+<path d="M840 148 V120 H965 V148 H1080 V424 H840 Z" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+<text x="854" y="141" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#172033">model</text>
+<text x="858" y="175" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Movie</text>
+<text x="858" y="200" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Coordinates</text>
+<text x="858" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Person</text>
+<text x="858" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Location</text>
+<text x="858" y="275" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">AppUser</text>
+<text x="858" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">LongText</text>
+<text x="858" y="325" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">MpaaRating</text>
+<text x="858" y="350" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">MovieGenre</text>
+<text x="858" y="375" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Color</text>
+<text x="858" y="400" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#172033">Country</text>
+<polyline points="280,220 440,220" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="360" y="205" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#172033">CDI calls</text>
+<polyline points="700,220 840,220" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="770" y="205" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#172033">JPA entities</text>
+<polyline points="160,299 160,520 960,520 960,424" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="560" y="507" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle" fill="#172033">API return types</text>
+</svg>

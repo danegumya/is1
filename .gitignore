@@ -5,6 +5,11 @@
 !/db/
 /db/*
 !/db/schema.sql
+!/docs/
+/docs/*
+!/docs/*.png
+!/docs/*.svg
+!/docs/*.puml
 
 .env
 .env.*

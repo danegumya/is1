@@ -1,0 +1,73 @@
+@startuml
+!pragma layout smetana
+skinparam monochrome true
+skinparam shadowing false
+skinparam dpi 180
+skinparam classAttributeIconSize 0
+hide empty methods
+class Movie <<entity>> {
+  + id : Integer
+  + version : long
+  + name : String
+  + creationDate : ZonedDateTime
+  + oscarsCount : Long
+  + budget : int
+  + totalBoxOffice : Integer
+  + mpaaRating : MpaaRating
+  + length : Long
+  + goldenPalmCount : Long
+  + genre : MovieGenre
+}
+class Coordinates <<entity>> {
+  + id : Integer
+  + x : int
+  + y : Long
+}
+class Person <<entity>> {
+  + id : Integer
+  + name : String
+  + eyeColor : Color
+  + hairColor : Color
+  + height : Double
+  + nationality : Country
+}
+class Location <<entity>> {
+  + id : Integer
+  + x : Float
+  + y : Float
+  + z : double
+}
+class AppUser <<entity>> {
+  + id : Integer
+  + name : String
+  + salt : String
+  + passwordHash : String
+}
+enum MpaaRating {
+  PG
+  R
+  NC_17
+}
+enum MovieGenre {
+  ACTION
+  WESTERN
+  TRAGEDY
+  THRILLER
+}
+enum Color {
+  RED
+  BLACK
+  BROWN
+}
+enum Country {
+  UNITED_KINGDOM
+  GERMANY
+  FRANCE
+  THAILAND
+}
+Movie "0..*" --> "1" Coordinates : coordinates
+Movie "0..*" --> "0..1" Person : director
+Movie "0..*" --> "0..1" Person : screenwriter
+Movie "0..*" --> "1" Person : operator
+Person "0..*" --> "0..1" Location : location
+@enduml

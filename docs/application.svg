@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1540" height="1440" viewBox="0 0 1540 1440">
+<rect width="1540" height="1440" fill="white"/>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2 2 L10 6 L2 10" fill="none" stroke="#334155" stroke-width="1.4"/></marker><marker id="triangle" markerWidth="15" markerHeight="14" refX="13" refY="7" orient="auto"><path d="M1 1 L13 7 L1 13 Z" fill="white" stroke="#334155" stroke-width="1.2"/></marker></defs>
+<rect x="40" y="40" width="330" height="375" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="40" y="40" width="330" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="205.0" y="59" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«RequestScoped»</text>
+<text x="205.0" y="82" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">MoviesResource</text>
+<text x="54" y="120" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">~ service : MovieService</text>
+<path d="M40 136 H370" stroke="#334155" fill="none"/>
+<text x="54" y="155" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ list(...) : Object</text>
+<text x="54" y="180" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ get(id) : Movie</text>
+<text x="54" y="205" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ create(input) : Movie</text>
+<text x="54" y="230" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ update(id, input) : Movie</text>
+<text x="54" y="255" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ delete(id, version) : void</text>
+<text x="54" y="280" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ references() : Object</text>
+<text x="54" y="305" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ person(input) : Object</text>
+<text x="54" y="330" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ coordinates(input) : Object</text>
+<text x="54" y="355" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ location(input) : Object</text>
+<text x="54" y="380" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ special(name, genre) : Object</text>
+<text x="54" y="405" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ award(input) : Object</text>
+<rect x="40" y="540" width="330" height="225" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="40" y="540" width="330" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="205.0" y="559" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«RequestScoped»</text>
+<text x="205.0" y="582" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">SessionResource</text>
+<text x="54" y="620" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">~ request : HttpServletRequest</text>
+<text x="54" y="645" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">~ auth : AuthService</text>
+<path d="M40 661 H370" stroke="#334155" fill="none"/>
+<text x="54" y="680" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ state() : Object</text>
+<text x="54" y="705" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ login(input) : Object</text>
+<text x="54" y="730" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ register(input) : Object</text>
+<text x="54" y="755" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ logout() : void</text>
+<rect x="570" y="40" width="390" height="375" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="570" y="40" width="390" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="765.0" y="59" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«ApplicationScoped»</text>
+<text x="765.0" y="82" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">MovieService</text>
+<text x="584" y="120" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">~ em : EntityManager</text>
+<text x="584" y="145" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">~ validator : Validator</text>
+<path d="M570 161 H960" stroke="#334155" fill="none"/>
+<text x="584" y="180" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ find(type, id) : T</text>
+<text x="584" y="205" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ list(...) : Map</text>
+<text x="584" y="230" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ save(id, input) : Movie</text>
+<text x="584" y="255" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ delete(id, version) : void</text>
+<text x="584" y="280" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ references() : Map</text>
+<text x="584" y="305" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ person(input) : Person</text>
+<text x="584" y="330" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ coordinates(input) : Coordinates</text>
+<text x="584" y="355" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ location(input) : Location</text>
+<text x="584" y="380" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ special(name, genre) : Object</text>
+<text x="584" y="405" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ award(input) : Object</text>
+<rect x="570" y="540" width="390" height="175" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="570" y="540" width="390" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="765.0" y="559" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«ApplicationScoped»</text>
+<text x="765.0" y="582" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">AuthService</text>
+<text x="584" y="620" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">~ em : EntityManager</text>
+<text x="584" y="645" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">~ validator : Validator</text>
+<path d="M570 661 H960" stroke="#334155" fill="none"/>
+<text x="584" y="680" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ authenticate(input, register) : String</text>
+<text x="584" y="705" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">- hash(password, salt) : byte[]</text>
+<rect x="1130" y="40" width="370" height="240" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="1130" y="40" width="370" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="1315.0" y="59" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«interface»</text>
+<text x="1315.0" y="82" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">EntityManager</text>
+<text x="1144" y="120" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ find(...) : T</text>
+<text x="1144" y="145" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ createQuery(...) : TypedQuery</text>
+<text x="1144" y="170" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ createNativeQuery(...) : Query</text>
+<text x="1144" y="195" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ persist(entity) : void</text>
+<text x="1144" y="220" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ remove(entity) : void</text>
+<text x="1144" y="245" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ flush() : void</text>
+<text x="1144" y="270" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ refresh(entity) : void</text>
+<rect x="570" y="820" width="390" height="90" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="570" y="820" width="390" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="765.0" y="839" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«utility»</text>
+<text x="765.0" y="862" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">Inputs</text>
+<text text-decoration="underline" x="584" y="900" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ check(validator, input) : void</text>
+<rect x="1130" y="820" width="370" height="90" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="1130" y="820" width="370" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="1315.0" y="839" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«interface»</text>
+<text x="1315.0" y="862" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">Validator</text>
+<text x="1144" y="900" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ validate(object, groups) : Set</text>
+<rect x="40" y="870" width="330" height="140" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="40" y="870" width="330" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="205.0" y="889" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«interface»</text>
+<text x="205.0" y="912" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">HttpSession</text>
+<text x="54" y="950" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ getAttribute(name) : Object</text>
+<text x="54" y="975" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ setAttribute(name, value) : void</text>
+<text x="54" y="1000" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ invalidate() : void</text>
+<path d="M1130 480 V452 H1250 V480 H1500 V688 H1130 Z" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+<text x="1145" y="473" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="start" fill="#172033">model</text>
+<rect x="1150" y="493" width="330" height="29" fill="white" stroke="#334155"/>
+<text x="1315" y="513" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#172033">Movie</text>
+<rect x="1150" y="530" width="330" height="29" fill="white" stroke="#334155"/>
+<text x="1315" y="550" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#172033">Person</text>
+<rect x="1150" y="567" width="330" height="29" fill="white" stroke="#334155"/>
+<text x="1315" y="587" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#172033">Coordinates</text>
+<rect x="1150" y="604" width="330" height="29" fill="white" stroke="#334155"/>
+<text x="1315" y="624" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#172033">Location</text>
+<rect x="1150" y="641" width="330" height="29" fill="white" stroke="#334155"/>
+<text x="1315" y="661" font-family="Arial, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#172033">AppUser</text>
+<polyline points="370,170 570,170" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="442" y="157" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#172033">CDI</text>
+<polyline points="370,650 570,650" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="442" y="637" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#172033">CDI</text>
+<polyline points="960,145 1130,145" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="1025" y="132" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#172033">JPA</text>
+<polyline points="960,600 1090,600 1090,250 1130,250" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="1010" y="587" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#172033">JPA</text>
+<polyline points="960,340 1020,340 1020,507 1130,507" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="1036" y="494" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#172033">entities</text>
+<polyline points="960,675 1040,675 1040,655 1150,655" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="1046" y="643" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#172033">AppUser</text>
+<polyline points="570,385 510,385 510,855 570,855" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="518" y="807" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#172033">check</text>
+<polyline points="765,715 765,820" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="780" y="772" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#172033">check</text>
+<polyline points="960,865 1130,865" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="1013" y="852" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#172033">validate</text>
+<polyline points="205,765 205,870" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="220" y="824" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#172033">session</text>
+<rect x="40" y="1100" width="330" height="140" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="40" y="1100" width="330" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="205.0" y="1119" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«WebFilter»</text>
+<text x="205.0" y="1142" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">SecurityFilter</text>
+<text x="54" y="1180" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ doFilter(input, output, chain) : void</text>
+<text x="54" y="1205" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">- allowed(address) : boolean</text>
+<text x="54" y="1230" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">- fail(response, status, message) : void</text>
+<rect x="40" y="1320" width="330" height="90" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="40" y="1320" width="330" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="205.0" y="1339" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«interface»</text>
+<text x="205.0" y="1362" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">Filter</text>
+<text x="54" y="1400" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ doFilter(input, output, chain) : void</text>
+<rect x="570" y="1100" width="390" height="90" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="570" y="1100" width="390" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="765.0" y="1119" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«Provider»</text>
+<text x="765.0" y="1142" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">Errors</text>
+<text x="584" y="1180" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ toResponse(error) : Response</text>
+<rect x="570" y="1320" width="390" height="90" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="570" y="1320" width="390" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="765.0" y="1339" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«interface»</text>
+<text x="765.0" y="1362" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">ExceptionMapper&lt;Exception&gt;</text>
+<text x="584" y="1400" font-family="Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#172033">+ toResponse(error) : Response</text>
+<rect x="1130" y="1100" width="370" height="65" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="1130" y="1100" width="370" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="1315.0" y="1119" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«ApplicationPath /api»</text>
+<text x="1315.0" y="1142" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">Api</text>
+<rect x="1130" y="1320" width="370" height="65" fill="white" stroke="#334155" stroke-width="1.5"/>
+<rect x="1130" y="1320" width="370" height="55" fill="#edf2f7" stroke="#334155" stroke-width="1.5"/>
+<text x="1315.0" y="1339" font-family="Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" fill="#172033">«Jakarta REST»</text>
+<text x="1315.0" y="1362" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#172033">Application</text>
+<polyline points="205,1100 205,1010" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="220" y="1063" font-family="Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#172033">session</text>
+<polyline points="205,1240 205,1320" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#triangle)" stroke-dasharray="7 5"/>
+<polyline points="765,1190 765,1320" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#triangle)" stroke-dasharray="7 5"/>
+<polyline points="1315,1165 1315,1320" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#triangle)"/>
+</svg>

@@ -1,0 +1,41 @@
+@startuml
+!pragma layout smetana
+skinparam monochrome true
+skinparam shadowing false
+skinparam dpi 180
+hide members
+left to right direction
+package "ru.itmo.movies.api" as api {
+  class "Api" as Api
+  class "MoviesResource" as MoviesResource
+  class "SessionResource" as SessionResource
+  class "SecurityFilter" as SecurityFilter
+  class "Errors" as Errors
+}
+package "ru.itmo.movies.service" as service {
+  class "MovieService" as MovieService
+  class "AuthService" as AuthService
+  class "Inputs" as Inputs
+  class "Inputs.MovieData" as Inputs_MovieData
+  class "Inputs.PersonData" as Inputs_PersonData
+  class "Inputs.CoordinatesData" as Inputs_CoordinatesData
+  class "Inputs.LocationData" as Inputs_LocationData
+  class "Inputs.Credentials" as Inputs_Credentials
+  class "Inputs.Award" as Inputs_Award
+}
+package "ru.itmo.movies.model" as model {
+  class "Movie" as Movie
+  class "Coordinates" as Coordinates
+  class "Person" as Person
+  class "Location" as Location
+  class "AppUser" as AppUser
+  class "LongText" as LongText
+  enum "MpaaRating" as MpaaRating
+  enum "MovieGenre" as MovieGenre
+  enum "Color" as Color
+  enum "Country" as Country
+}
+api ..> service : CDI calls
+service ..> model : JPA entities
+api ..> model : API return types
+@enduml
